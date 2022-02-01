@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="vendors/css/Grid.css" />
+    <link rel="stylesheet" href="login.css" />
+    <script src="script.js"> </script>
+  </head>
+  <body>
+    <section class="login">
+      <h2 class="title"><b>CYPRESS</b></h2>
+      <h2 class="city"><b>City Of Toronto</b></h2>
+      <hr />
+      <p class="info">
+        You are currently at the Cypress Login Page. By logging into this
+        system, you will be able to report a variety of problems as you have
+        witnessed on the streets of Toronto.
+      </p>
+      <form class="contact-form" method="post" action="#"></form>
+        <div class="username">
+          <div class="user col span-1-of-3">
+            <label for="username">Username:</label>
+          </div>
+          <div class="userI col span-2-of-3">
+            <input type="text" name="username" id="username" required />
+            <p class="cypress">@cypress.on.ca</p>
+          </div>
+        </div>
+        <div class="password">
+          <div class="pass col span-1-of-3">
+            <label for="pass">Password:</label>
+          </div>
+          <div class="passI col span-2-of-3">
+            <input type="password" name="password" id="password" required />
+          </div>
+        </div>
+      </form>
+      <div class="button">
+        <button class="loginB" onclick="checkLogin()">Login</button>
+        <button class="cancel" onclick="loginCancel()">Cancel</button>
+        
+      </div>
+      <hr>
+      <div style="width: 50%; margin: 0 auto;">
+        <button style="width: 50%;margin-left: 25%; margin-top: 10px" onclick="window.location = 'register.html'">Register an account</button>
+      </div>
+      <p class="faq" onclick="redirectTo('faq.html')">FAQ</p>
+    </section>
+    <script src="script.js"></script>
+    <script>
+      if (getAuthUser() != undefined) window.location = "ReportingScreen.html";
+    </script>
+  </body>
+</html>

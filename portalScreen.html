@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<meta charset="utf-8">
+<head>
+  <script src="script.js"></script>
+</head>
+<style>
+.alignleft {
+	float: left;
+	margin-left:4%;
+	font-size:30px;
+}
+.alignright {
+	float: right;
+	margin-right:4%;
+	font-size:30px;
+}
+
+
+input, label{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 10px 0;
+  font-size: 20px;
+}
+
+.FAQbtn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-block;
+  bottom:2px;
+  right:2px;
+}
+
+.FAQbtn:hover {background: gray;}
+
+.btn {
+  height: 17px;
+  line-height: 20px;  
+  width: 17px;  
+  font-size:18px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: skyblue;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:focus{
+background-color:black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.left {
+  position: absolute;
+  left: 2%;
+  width: 25%;
+  
+  padding: 10px;
+}
+
+.right {
+  position: absolute;
+  right: 2%;
+  width: 25%;
+  
+  padding: 10px;
+  width:65%;
+}
+
+.buttonGO-container {
+position: absolute;
+right:6%;
+bottom:1%;
+}
+
+</style>
+
+<script>
+// inititalize address variable
+address = "";
+</script> 
+
+<body style="background-color:#F0F0F0">
+<div id="textbox">
+  <p class="alignleft"><u>CYPRESS</u></p>
+  <p class="alignright"><u>City of Toronto</u></p>
+</div>
+
+<div style="clear: both;"></div>
+<main>
+<div style="margin-left:2%;" class="left">
+<h2 style="margin-bottom:-4px;"> Quick Links >></h2>
+  <br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('register.html')"> 
+    <label class="control-label">Register</label>
+    
+	<br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('login.html')"> 
+    <label class="control-label">Login</label>
+	  <br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('allReports.html')"> 
+    <label class="control-label">All Reports</label>
+	  <br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('rankings.html')"> 
+    <label class="control-label">Rankings</label>
+	  <br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('ReportingScreen.html')"> 
+    <label class="control-label">Report a Problem</label>
+	  <br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('suggestionPage.html')"> 
+    <label class="control-label">Suggest</label>
+	  <br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('tellfriend.html')"> 
+    <label class="control-label">Tell A Friend</label>
+    <br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('faq.html')"> 
+    <label class="control-label">FAQ</label>
+	  <br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('ContactUs.html')"> 
+    <label class="control-label">Contact Us</label>
+    <br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('ChangeInformation.html')"> 
+    <label class="control-label">Change Information</label>
+	  <br>
+  <input type="button" class="btn" id="click" onclick="redirectHelper('DeleteUser.html')"> 
+    <label class="control-label">Delete User</label>
+    <br>
+  
+	<br><br><br>
+	<div class="buttonGO-container">
+<button type="button" style="font-size:18px;" onclick="redirect(address)" >Go</button></p>
+</div>
+</div>
+<div class="right">
+<div class="row">
+  <div class="column">
+    <img src="toronto.webp" alt="Snow" style="width:88%">
+  </div>
+  <div style="margin-top:10%; margin-left:2%;" class="column">
+    <img src="6street.jpg" alt="Forest" style="width:190%">
+  </div>
+  <br>
+</div>
+<br>
+<div>
+  <h2 style="text-align:center;"> Keeping our City streets clean and safe </h2>
+  </div>
+  </div>
+  <div style="position:absolute; bottom:5px; right:5px;">
+  <button class="FAQbtn">FAQ</button>
+  <div>
+</main>
+</body>
+</html>

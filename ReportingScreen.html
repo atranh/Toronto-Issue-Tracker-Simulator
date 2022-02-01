@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+<meta charset="utf-8">
+<script src="script.js"></script>
+<style>
+.alignleft {
+	float: left;
+	margin-left:4%;
+	font-size:30px;
+}
+.alignright {
+	float: right;
+	margin-right:4%;
+	font-size:30px;
+}
+
+.control-label {
+font-size:18px;
+}
+
+.FAQbtn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-block;
+  bottom:2px;
+  right:2px;
+}
+
+.FAQbtn:hover {background: gray;}
+
+.LOGOUTbtn {
+  border: none;
+  background-color: inherit;
+  padding: 14px 28px;
+  font-size: 18px;
+  cursor: pointer;
+  display: inline-block;
+  right:2px;
+}
+
+.LOGOUTbtn:hover {background: gray;}
+
+.btn {
+  height: 17px;
+  line-height: 20px;  
+  width: 17px;  
+  font-size:18px;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: skyblue;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+}
+
+.btn:focus{
+background-color:black;
+}
+
+.left {
+  position: absolute;
+  left: 2%;
+  width: 25%; 
+  padding: 10px;
+}
+
+.right {
+  position: absolute;
+  right: 2%;
+  width: 25%;
+  padding: 10px;
+  width:65%;
+}
+
+.LOGOUTbutton {
+position:absolute;
+right:5%;
+}
+
+.button1-container {
+position: absolute;
+top:75%;
+left:25%;
+}
+
+.button2-container {
+position: absolute;
+top:75%;
+right:50%;
+}
+</style>
+<body style="background-color:#F0F0F0">
+<div id="textbox">
+  <p class="alignleft"> <!-- Home button -->
+
+                <a><button onclick="redirectTo('portalScreen.html')" style="font-size: 1.6rem;"> <u>CYPRESS</u></button></a>
+
+            </p>
+  <p class="alignright"><u>City of Toronto</u></p>
+</div>
+<main>
+<br><br><br><br><br>
+    <div class="LOGOUTbutton">
+  <button  class="LOGOUTbtn" onclick="logout()">LOGOUT</button>
+  </div>
+<div style="margin-top:2%; margin-left:6%; margin-right:6%;">
+<form>
+  <label style="font-size:20px;" for="fname"><strong>Address:</strong></label>
+  <input style="font-size:20px; margin-left:3%; color:black; width:77%;" type="text" id="fname" name="fname"><br>
+</form>
+<br><br>
+<h2>Problems at the Site</h2><hr></hr>
+<div style="margin-left:5%;" class="left">
+  <br>
+  <input type="checkbox" class="btn" id="click"> 
+    <label class="control-label">Utility Failures</label>
+	<br><br><br>
+  <input type="checkbox" class="btn" id="click" > 
+    <label class="control-label">Potholes</label>
+	 <br><br><br>
+	<input type="checkbox" class="btn" id="click" > 
+    <label class="control-label">City Property Vandalism</label>
+	<br><br><br>
+  <input type="checkbox" class="btn" id="click" > 
+    <label class="control-label">Eroded Streets</label>
+	  <br>
+	  </div>
+	   
+<div style="margin-left:5%;" class="right">
+  <br>
+  <input type="checkbox" class="btn" id="click" > 
+    <label class="control-label">Tree Collapse</label>
+	<br><br><br>
+  <input type="checkbox" class="btn" id="click" > 
+    <label class="control-label">Flodded Streets</label>
+	 <br><br><br>
+	<input type="checkbox" class="btn" id="click" > 
+    <label class="control-label">Mould and Spore growth</label>
+	<br><br><br>
+  <input type="checkbox" class="btn" id="click" > 
+    <label class="control-label">Garbage or any other Road Blocking Objects</label>
+	  <br>
+	  </div>
+
+</div>
+<div class="button1-container">
+<button style="font-size:18px;" type="button" onclick="reporting()">Report</button></p>
+</div>
+<div class="button2-container">
+<button style="font-size:18px;" type="button" onclick="redirectTo('portalScreen.html')">Cancel</button></p>
+</div>
+  <div style="position:absolute; bottom:5px; right:5px;">
+  <button class="FAQbtn" onclick="redirectTo('faq.html')">FAQ</button>
+  </div>
+</main>
+</body>
+</html>

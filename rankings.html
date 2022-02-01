@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Grid.css" />
+    <link rel="stylesheet" href="register.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <section class="registration">
+      <h2 class="title"><b>CYPRESS</b></h2>
+      <h2 class="city"><b>City Of Toronto</b></h2>
+      <hr />
+      <p class="info">
+        <b>Report Rankings</b>
+      </p>
+        <div class="row" style="padding-right: 20px">
+            <div class="col span-1-of-2" style="text-align: center;">
+                <b>Top 5 reported hotspots:</b>
+                <ol id="hotspotsList">
+
+                </ol>
+            </div>
+            <div class="col span-1-of-2" style="text-align: center;">
+                <b>Top 5 reported problems:</b>
+                <ol id="problemsList">
+                    
+                </ol>
+            </div>
+        </div>
+        <div class="button" style="text-align: center;">
+            <button style="margin-left: 0 !important" class="cancel" onclick="redirectTo('portalScreen.html')">Go to portal</button>
+        </div>
+      <p class="faq" onclick="redirectTo('faq.html')">FAQ</p>
+    </section>
+  </body>
+  <script>
+
+    isAuthMiddleware();
+
+    var problems = {};
+    var addresses = {};
+    var problemsArr = [];
+    var addressesArr = [];
+
+    function displayRankings() {
+
+
+        problems = {};
+        addresses = {};
+        problemsArr = [];
+        addressesArr = [];
+
+        // first, get reports
+        reports = getReports();
+
+        // second, iterate through reports and add problems and addresses with their respective count to separate objects, sorted by their value
+        for ( i = 0; i < reports.length; i++){
+
+            // check if address is added or not and add it if its missing. increment frequency.
+            reportAddress = reports[i].address.toLowerCase();
+            if (reportAddress in addresses == false) {
+                addresses[reportAddress] = 1;
+            } else {
+                addresses[reportAddress] = addresses[reportAddress] + 1;
+            }
+
+            // check if problems are added or not and add if they are missing. increment frequency.
+            reportProblems = reports[i].problems;
+            
+            for (x = 0; x < reportProblems.length; x++) {
+                problem = reportProblems[x].toLowerCase();
+                if (problem in problems == false) {
+                    problems[problem] = 1;
+                } else {
+                    problems[problem] = problems[problem] + 1; 
+                }
+            }
+        }
+
+        // Create problems array
+        problemsArr = Object.keys(problems).map(function(key) {
+            return [key, problems[key]];
+        });
+
+        // Create addresses array
+        addressesArr = Object.keys(addresses).map(function(key) {
+            return [key, addresses[key]];
+        });
+
+        // sort problems and addresses descendingly
+        problemsArr.sort(function(first, second) {
+            return second[1] - first[1];
+        });
+        addressesArr.sort(function(first, second) {
+            return second[1] - first[1];
+        });
+
+        // show only top 5 of problems and addresses
+        problemsArr.slice(0, 5);
+        addressesArr.slice(0, 5);
+
+        // display info graphically for problems
+        problemsList = document.getElementById("problemsList");
+        for (b = 0; b < problemsArr.length; b++) {
+            problemName = problemsArr[b][0].charAt(0).toUpperCase() + problemsArr[b][0].slice(1)
+            problemsList.innerHTML = problemsList.innerHTML + "<li>" + problemName + " <b>(" + problemsArr[b][1] + " times)</b>" + "</li>"
+        }
+
+        // display info graphically for addresses
+        hotspotsList = document.getElementById("hotspotsList");
+        for (c = 0; c < addressesArr.length; c++) {
+            hotspotName = addressesArr[c][0].charAt(0).toUpperCase() + addressesArr[c][0].slice(1)
+            hotspotsList.innerHTML = hotspotsList.innerHTML + "<li>" + hotspotName + " <b>(" + addressesArr[c][1] + " times)</b>" + "</li>"
+        }
+    }
+
+    displayRankings();
+
+  </script>
+</html>

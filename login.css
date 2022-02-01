@@ -1,0 +1,94 @@
+.login {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 200px;
+  border: 5px ridge #ccc;
+  padding: 10px 10px 0 10px;
+  background-color: #f0f0f0;
+}
+.info {
+  margin-bottom: 50px;
+}
+.city {
+  display: inline;
+  margin-left: 520px;
+}
+.title {
+  display: inline;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  width: 300px;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+.password {
+  margin-top: 20px;
+  margin-left: 125px;
+}
+.passI {
+  display: inline;
+  margin-left: 24px;
+}
+.pass {
+  display: inline;
+}
+.username {
+  margin-left: 125px;
+}
+.userI {
+  display: inline;
+  margin-left: 20px;
+}
+.user {
+  display: inline;
+}
+.cypress {
+  display: inline;
+  font-size: 15px;
+}
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+.loginB {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin: 0 auto;
+  margin-left: 200px;
+}
+.cancel {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin: 0 auto;
+  margin-left: 200px;
+}
+.button {
+  margin-top: 80px;
+  margin-bottom: 30px;
+}
+.faq {
+  margin-left: 770px;
+}

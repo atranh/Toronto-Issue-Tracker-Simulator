@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="vendors/css/Grid.css" />
+    <link rel="stylesheet" href="register.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <section class="registration">
+      <h2 class="title"><b>CYPRESS</b></h2>
+      <h2 class="city"><b>City Of Toronto</b></h2>
+      <hr />
+      <p class="info">
+        <b>Please enter information below:</b>
+      </p>
+      <form class="contact-form" method="post" action="#"></form>
+        <div class="Fname">
+          <div class="name col span-1-of-3">
+            <label for="name">First Name:</label>
+          </div>
+          <div class="nameI col span-2-of-3">
+            <input type="text" name="name" id="name" required />
+          </div>
+        </div>
+        <div class="lastName">
+          <div class="last col span-1-of-3">
+            <label for="lastname">Last Name:</label>
+          </div>
+          <div class="lastI col span-2-of-3">
+            <input type="text" name="lastname" id="lastname" required />
+          </div>
+        </div>
+        <div class="address">
+            <div class="name col span-1-of-3">
+              <label for="name">Address:</label>
+            </div>
+            <div class="addrI col span-2-of-3">
+              <input type="address" name="address" id="address" required />
+            </div>
+        </div>
+        <div class="phone">
+            <div class="name col span-1-of-3">
+              <label for="name">Phone Number:</label>
+            </div>
+            <div class="nameI col span-2-of-3">
+              <input type="text" name="name" id="name" required />
+            </div>
+        </div>
+        <div class="email">
+            <div class="name col span-1-of-3">
+              <label for="name">Email Address:</label>
+            </div>
+            <div class="nameI col span-2-of-3">
+              <input type="text" name="name" id="name" required />
+            </div>
+        </div>
+        <div class="email" style="margin-left: 93px;">
+          <div class="name col span-1-of-3">
+            <label for="name">Security Answer:</label>
+          </div>
+          <div class="nameI col span-2-of-3">
+            <input type="text" name="securityAnswer" id="securityAnswer" required />
+          </div>
+      </div>
+        <div class="username">
+            <div class="name col span-1-of-3">
+              <label for="name"><span style="color: red">*</span>Username:</label>
+            </div>
+            <div class="nameI col span-2-of-3">
+              <input type="text" name="name" id="name" required />
+              <p class="cypress">@cypress.on.ca</p>
+            </div>
+          </div>
+          <div class="password">
+            <div class="name col span-1-of-3">
+              <label for="name"><span style="color: red">*</span>Password:</label>
+            </div>
+            <div class="nameI col span-2-of-3">
+              <input type="password" name="password" id="password" required />
+            </div>
+            <p id="registrationErrorLabel" style="display: none; color: red;">
+              
+            </p>
+          </div>
+          <small style="margin-left: 125px; color: red">* indicates a required field.</small>
+      </form>
+      <div class="button">
+        <button class="loginB" onclick="checkRegister()">Register</button>
+        <button class="cancel" onclick="loginCancel()">Cancel</button>
+      </div>
+      <hr style="margin-top: 20px">
+      <div style="width: 50%; margin: 0 auto;">
+        <button style="width: 50%;margin-left: 25%; margin-top: 10px" onclick="window.location = 'login.html'">Login to an account</button>
+      </div>
+      <p class="faq" onclick="redirectTo('faq.html')">FAQ</p>
+    </section>
+  </body>
+  <script>
+    if (getAuthUser() != undefined) window.location = "ReportingScreen.html";
+  </script>
+</html>

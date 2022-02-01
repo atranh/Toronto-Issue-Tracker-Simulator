@@ -1,0 +1,129 @@
+.body {
+  background-color: #f0f0f0;
+}
+.registration {
+  width: 800px;
+  margin: 0 auto;
+  margin-top: 200px;
+  border: 5px ridge #ccc;
+  padding: 10px 10px 2px 10px;
+  background-color: #f0f0f0;
+}
+
+.info {
+  margin-bottom: 50px;
+  font-size: 20px;
+}
+.city {
+  display: inline;
+  margin-left: 520px;
+}
+.title {
+  display: inline;
+}
+
+input[type="text"],
+input[type="password"],
+select,
+textarea {
+  width: 300px;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+input[type="address"] {
+  width: 500px;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+input[type="checkbox"] {
+  margin: 10px 5px 10px 0;
+}
+
+.lastName {
+  margin-left: 125px;
+  margin-bottom: 20px;
+}
+.lastI {
+  display: inline;
+  margin-left: 22px;
+}
+.last {
+  display: inline;
+}
+.Fname {
+  margin-left: 125px;
+  margin-bottom: 20px;
+}
+.nameI {
+  display: inline;
+  margin-left: 20px;
+}
+.name {
+  display: inline;
+}
+.addrI {
+  display: inline;
+  margin-left: 20px;
+}
+.address {
+  margin-bottom: 20px;
+  margin-left: 143px;
+}
+.phone {
+  margin-bottom: 20px;
+  margin-left: 102px;
+}
+.email {
+  margin-bottom: 20px;
+  margin-left: 106px;
+}
+.username {
+  margin-bottom: 20px;
+  margin-left: 127px;
+}
+.password {
+  margin-bottom: 20px;
+  margin-left: 129px;
+}
+.cypress {
+  display: inline;
+  font-size: 15px;
+}
+
+.contact-form {
+  width: 60%;
+  margin: 0 auto;
+}
+.loginB {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin: 0 auto;
+  margin-left: 200px;
+}
+.cancel {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  margin: 0 auto;
+  margin-left: 200px;
+}
+.button {
+  margin-top: 40px;
+}
+.faq {
+  margin-left: 770px;
+}

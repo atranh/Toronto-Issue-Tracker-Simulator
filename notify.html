@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="Grid.css" />
+    <link rel="stylesheet" href="register.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <section class="registration">
+      <h2 class="title"><b>CYPRESS</b></h2>
+      <h2 class="city"><b>City Of Toronto</b></h2>
+      <hr />
+      <p class="info">
+        <b>Partake in a survey below:</b>
+      </p>
+      <form class="contact-form" method="post" action="#"></form>
+
+            <div class="row" style="padding-right: 20px">
+                <div class="col span-2-of-3">
+                    What are some of the issues that you deal with in the city?
+                </div>
+                <div class="col span-1-of-3">
+                    <textarea name="issuesAnswer" style="width:100% !important"></textarea>
+                </div>
+            </div>
+          
+            <div class="row" style="padding-right: 20px">
+                <div class="col span-2-of-3">
+                    How safe do you feel in the city? And why?
+                </div>
+                <div class="col span-1-of-3">
+                    <textarea name="safetyAnswer" style="width:100% !important"></textarea>
+                </div>
+            </div>
+
+            <div class="row" style="padding-right: 20px">
+                <div class="col span-2-of-3">
+                    What would you like to see improve in the city?
+                </div>
+                <div class="col span-1-of-3">
+                    <textarea name="improvementsAnswer" style="width:100% !important"></textarea>
+                </div>
+            </div>
+      </form>
+      <div class="button">
+        <button class="loginB" onclick="submitSurvey()">Submit</button>
+        <button class="cancel" onclick="redirectTo('ReportingScreen.html')">Go Home</button>
+      </div>
+      <p class="faq">FAQ</p>
+    </section>
+  </body>
+  <script>
+    isAuthMiddleware();
+    user = getAuthUser();
+
+    if (user.hasTakenSurvey != undefined && user.hasTakenSurvey == true) redirectTo("portalScreen.html");
+
+    function submitSurvey() {
+        const registry = document.querySelectorAll('textarea');
+
+        // ensure all fields are filled in
+        for ( i = 0; i < registry.length; i++){
+            if (registry[i].value == "" || registry[i].value == undefined) {
+                window.alert("You must answer all the questions!");
+                return;
+            }
+        };
+
+        const surveyRecord = {
+            issuesAnswer: registry[0].value, 
+            safetyAnswer: registry[1].value,
+            improvementsAnswer: registry[2].value,
+        }
+
+        addSurvey(surveyRecord);
+
+        user.hasTakenSurvey = true;
+        updateUser(user);
+
+        window.alert("Thank you for your response! Redirecting you to portal page in 3 seconds..");
+        setTimeout(function(){
+            redirectTo("ReportingScreen.html");
+        }, 3000);
+    }
+
+  </script>
+</html>
